@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<!--! 
+"fapro:roborock" - Xiaomi Roborock Vacuum SVG icon with optional "xiaomi_cloud_map_extractor" background image for "hass-fontawesome" 
+by Veli (Veromann) - https://github.com/velijv - https://twitter.com/velivelilev - https://veli.ee 
+Copyright 2022 Veli.
+-->
+<defs>
+	<linearGradient id="light" x1="256" x2="256" y1="416" y2="-8" gradientUnits="userSpaceOnUse">
+		<stop offset="1-8" style="stop-color:#fff;stop-opacity:.1"/>
+		<stop offset="1" style="stop-color:#fff;stop-opacity:.4"/>
+	</linearGradient>
+	<linearGradient id="radar" x1="256" x2="256" y1="336" y2="176" gradientUnits="userSpaceOnUse">
+		<stop offset="0" style="stop-color:#fff;stop-opacity:.1"/>
+		<stop offset="1" style="stop-color:#fff;stop-opacity:.4"/>
+	</linearGradient>
+	<filter id="shadow-primary" width="300%" height="300%" x="-1" y="-1">
+		<feOffset dy="5" in="SourceGraphic" result="offOut"/>
+		<feGaussianBlur in="offOut" result="blurOut" stdDeviation="5"/>
+		<feBlend in="SourceGraphic" in2="blurOut"/>
+	</filter>
+	<filter id="shadow-secondary" width="300%" height="300%" x="-1" y="-1">
+		<feOffset dy="30" in="SourceGraphic" result="offOut"/>
+		<feGaussianBlur in="offOut" result="blurOut" stdDeviation="30"/>
+		<feBlend in="SourceGraphic" in2="blurOut"/>
+	</filter>
+	<pattern id="map" width="512" height="512" patternUnits="userSpaceOnUse">
+		<image width="512" height="512" href="/local/map.png"/>
+		<!--! 
+		Change your image here at href="" value:
+		it could be a local static image, from the web, or live camera image, ie 
+		- href="/local/map.png" 
+		- href="/api/camera_proxy/camera.xiaomi_cloud_map_extractor" 
+		- href="https://brands.home-assistant.io/_/homeassistant/icon.png" 
+		-->	
+	</pattern>
+<style>
+	@keyframes map{0%,40%{transform:rotate(0)}20%{transform:rotate(360deg)}}@keyframes button{0%{opacity:1}50%{opacity:0;filter:drop-shadow(0 0 0 transparent)}}@keyframes zee{0%{fill:var(--success-color,var(--brand-color))}50%{fill:var(--primary-color,var(--brand-color))}}circle,path{--secondary-opacity:0.4;--brand-color:var(--accent-color,#FF6900);--brand:255,105,0;--accent:255,105,0;--brand-stroke-color:#ff3c00;--vacuum-color:#fff;--floor-color:#000}.fa-secondary{opacity:.4}path{shape-rendering:crispEdges}circle{shape-rendering:geometricPrecision}.map{fill:url(#map);animation:map 10s cubic-bezier(.17,.67,.43,.98) infinite}image{preserveAspectRatio:xMidYMid meet}.glare{fill:url(#light)}.brand{fill:#ff6900;stroke:#ff3c00;stroke-opacity:.3;stroke-linecap:round;vector-effect:non-scaling-stroke;stroke-alignment:inner;paint-order:stroke}.button,.logo{filter:drop-shadow(0 -2px 1px #000) drop-shadow(0 -1px 0 #000)}.logo{fill:#fff}.button,.zee{fill:var(--success-color,var(--brand-color));animation:button 4s cubic-bezier(.17,.67,.43,.98) infinite alternate}.zee{filter:drop-shadow(0 -2px 1px #000) drop-shadow(0 2px 0 #fff);animation:zee 4s cubic-bezier(.17,.67,.43,.98) infinite}.shadow{filter:drop-shadow(0 4px 8px #000) drop-shadow(0 8px 16px rgba(0,0,0,.5)) drop-shadow(0 16px 32px rgba(0,0,0,.25))}.radar{fill:url(#radar)}
+</style>
+</defs>
+<circle id="map" cx="256" cy="256" r="256" class="map" transform-origin="50% 50%"/>
+<path id="glare" d="M256 0C131 0 26.9 89.6 4.5 208.1 4.5 322.9 117.1 416 256 416s251.5-93.1 251.5-207.9C485.1 89.6 381 0 256 0z" class="glare"/>
+<path id="fa-secondary" d="M224.5 165.3s.1 0 0 0c1.4-.5 2.8-.9 4.2-1.3.1 0 .2-.1.3-.1 1.3-.4 2.7-.8 4-1.1.1 0 .3-.1.4-.1 1.3-.3 2.7-.6 4-.9.1 0 .3-.1.5-.1 1.3-.3 2.7-.5 4.1-.7.2 0 .3 0 .5-.1 1.4-.2 2.8-.4 4.1-.5h.4c1.4-.1 2.8-.2 4.3-.3h.3c1.5-.1 3-.1 4.5-.1s3 0 4.5.1h.3c1.4.1 2.9.2 4.3.3h.4c1.4.1 2.8.3 4.1.5.2 0 .3 0 .5.1 1.4.2 2.7.4 4.1.7.2 0 .3.1.5.1 1.4.3 2.7.6 4 .9.1 0 .3.1.4.1 1.4.3 2.7.7 4 1.1.1 0 .2.1.3.1 1.4.4 2.7.8 4.1 1.3h.1c35.1 12.2 61 44.2 64.2 82.7h128.2C475.6 128 377 32 256 32S36.4 128 32.2 248h128.2c3.1-38.5 29-70.5 64.1-82.7zM336 88c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm-80-16c13.3 0 24 10.7 24 24s-10.7 24-24 24c-13.2 0-24-10.7-24-24s10.8-24 24-24zm-80 16c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm272 337.3c-3.5 4-7.2 7.9-10.9 11.7l-22.6-22.6c-3.8 3.8-7.7 7.4-11.7 10.9C363.4 459.4 312.1 480 256 480s-107.4-20.6-146.7-54.7c-4-3.5-7.9-7.1-11.7-10.9L75 437l-11-11.7 22.7-22.7C54.3 365.2 34 317 32.2 264h128.2c3.2 38.5 29 70.5 64.2 82.7h.1c1.3.5 2.7.9 4.1 1.3.1 0 .2.1.3.1 1.3.4 2.7.8 4 1.1.1 0 .3.1.4.1 1.3.3 2.7.6 4 .9.1 0 .3.1.5.1 1.3.3 2.7.5 4.1.7.2 0 .3 0 .5.1 1.4.2 2.8.4 4.1.5h.4c1.4.1 2.8.2 4.3.3h.3c1.5.1 3 .1 4.5.1s3 0 4.5-.1h.3c1.4-.1 2.9-.2 4.3-.3h.4c1.4-.1 2.8-.3 4.1-.5.2 0 .3 0 .5-.1 1.4-.2 2.7-.4 4.1-.7.2 0 .3-.1.5-.1 1.4-.3 2.7-.6 4-.9.1 0 .3-.1.4-.1 1.4-.3 2.7-.7 4-1.1.1 0 .2-.1.3-.1 1.4-.4 2.7-.8 4.1-1.3h.1c35.1-12.2 61-44.2 64.2-82.7h128.2c-1.9 53-22.1 101.2-54.6 138.7l12.8 12.8 9.6 9.8zM243.3 280h25.4l-7-7 11.3-11.3 20.7 20.7c2.3 2.3 3 5.7 1.7 8.7s-4.2 4.9-7.4 4.9h-64c-3.2 0-6.2-1.9-7.4-4.9s-.6-6.4 1.7-8.7l50.3-50.3H216l16-16h56c3.2 0 6.2 1.9 7.4 4.9s.6 6.4-1.7 8.7L243.3 280z" class="secondary fa-secondary"/>
+<circle id="shadow" cx="256" cy="256" r="96" class="shadow"/>
+<path id="fa-primary" d="M511.9 248C507.6 110.3 394.7 0 256 0S4.4 110.3.1 248H0v16h.1C2 325.8 25.8 382.1 64 425.3l22.7-22.7C54.3 365.2 34 317 32.2 264h128.2c3.2 38.5 29 70.5 64.2 82.7h.1c1.3.5 2.7.9 4.1 1.3.1 0 .2.1.3.1 1.3.4 2.7.8 4 1.1.1 0 .3.1.4.1 1.3.3 2.7.6 4 .9.1 0 .3.1.5.1 1.3.3 2.7.5 4.1.7.2 0 .3 0 .5.1 1.4.2 2.8.4 4.1.5h.4c1.4.1 2.8.2 4.3.3h.3c1.5.1 3 .1 4.5.1s3 0 4.5-.1h.3c1.4-.1 2.9-.2 4.3-.3h.4c1.4-.1 2.8-.3 4.1-.5.2 0 .3 0 .5-.1 1.4-.2 2.7-.4 4.1-.7.2 0 .3-.1.5-.1 1.4-.3 2.7-.6 4-.9.1 0 .3-.1.4-.1 1.4-.3 2.7-.7 4-1.1.1 0 .2-.1.3-.1 1.4-.4 2.7-.8 4.1-1.3h.1c35.1-12.2 61-44.2 64.2-82.7h128.2c-1.9 53-22.1 101.2-54.6 138.7l22.7 22.7c38.2-43.3 62-99.5 63.9-161.3h.1v-16h-.4zm-250.2 25 11.3-11.3 20.7 20.7c2.3 2.3 3 5.7 1.7 8.7s-4.2 4.9-7.4 4.9h-64c-3.2 0-6.2-1.9-7.4-4.9s-.6-6.4 1.7-8.7l50.3-50.3H216l16-16h56c3.2 0 6.2 1.9 7.4 4.9s.6 6.4-1.7 8.7L243.3 280h25.4l-7-7zm90-25c-3.2-38.5-29-70.5-64.2-82.7h-.1c-1.3-.5-2.7-.9-4.1-1.3-.1 0-.2-.1-.3-.1-1.3-.4-2.7-.8-4-1.1-.1 0-.3-.1-.4-.1-1.3-.3-2.7-.6-4-.9-.1 0-.3-.1-.5-.1-1.3-.3-2.7-.5-4.1-.7-.2 0-.3 0-.5-.1-1.4-.2-2.8-.4-4.1-.5h-.4c-1.4-.1-2.8-.2-4.3-.3h-.3c-1.5-.1-3-.1-4.5-.1s-3 0-4.5.1h-.3c-1.4.1-2.9.2-4.3.3h-.4c-1.4.1-2.8.3-4.1.5-.2 0-.3 0-.5.1-1.4.2-2.7.4-4.1.7-.2 0-.3.1-.5.1-1.4.3-2.7.6-4 .9-.1 0-.3.1-.4.1-1.4.3-2.7.7-4 1.1-.1 0-.2.1-.3.1-1.4.4-2.7.8-4.1 1.3h-.1c-35.1 12.2-61 44.2-64.2 82.7H32.2C36.4 128 135 32 256 32s219.6 96 223.8 216H351.7zm51 177.3 22.7 22.7c-45.1 39.8-104.4 64-169.3 64s-124.2-24.2-169.3-64l22.7-22.7C148.6 459.4 199.9 480 256 480s107.4-20.6 146.7-54.7zM280 96c0 13.3-10.7 24-24 24-13.2 0-24-10.7-24-24s10.8-24 24-24c13.3 0 24 10.7 24 24z" class="primary fa-primary"/>
+<circle id="gradient" cx="256" cy="256" r="88" class="radar"/>
+<path id="zee" d="M243.3 280h25.4l-7-7 11.3-11.3 20.7 20.7c2.3 2.3 3 5.7 1.7 8.7s-4.2 4.9-7.4 4.9h-64c-3.2 0-6.2-1.9-7.4-4.9s-.6-6.4 1.7-8.7l50.3-50.3H216l16-16h56c3.2 0 6.2 1.9 7.4 4.9s.6 6.4-1.7 8.7L243.3 280z" class="brand zee"/>
+<circle id="button" cx="256" cy="96" r="24" class="brand button"/>
+<path id="roborock" d="M192 416.6v8h1.8v-8c0-2.4 2-4.3 4.4-4.4h6.2v-1.8h-6.2c-3.5.2-6.2 2.9-6.2 6.2zm66.2 0v8h1.8v-8c0-2.4 2-4.4 4.4-4.4h6.2v-1.8h-6.2c-3.4.2-6.2 2.9-6.2 6.2zm-42.4-6.4h-4.1c-3.3 0-6 2.7-6 6v2.5c0 3.3 2.7 6 6 6h4.1c3.3 0 6-2.7 6-6v-2.5c.1-3.3-2.6-6-6-6zm4.3 8.4c0 2.3-1.9 4.3-4.2 4.3h-4.1c-2.3 0-4.2-1.9-4.2-4.3v-2.5c0-2.3 1.9-4.2 4.2-4.2h4.1c2.3 0 4.2 1.9 4.2 4.2v2.5zm30.3-8.4h-4.2c-3.3 0-6 2.7-6 6v2.5c0 3.3 2.7 6 6 6h4.1c3.3 0 6-2.7 6-6v-2.5c.1-3.3-2.6-6-5.9-6zm4.2 8.4c0 2.3-1.9 4.3-4.2 4.3h-4.2c-2.3 0-4.2-1.9-4.2-4.3v-2.5c0-2.3 1.9-4.2 4.2-4.2h4.1c2.3 0 4.2 1.9 4.2 4.2l.1 2.5zm26.9-8.4h-4.1c-3.3 0-6 2.7-6 6v2.5c0 3.3 2.7 6 6 6h4.1c3.3 0 6-2.7 6-6v-2.5c0-3.3-2.7-6-6-6zm4.2 8.4c0 2.3-1.9 4.2-4.2 4.2h-4.1c-2.3 0-4.2-1.9-4.2-4.2v-2.5c0-2.3 1.9-4.2 4.2-4.2h4.1c2.3 0 4.2 1.9 4.2 4.2v2.5zm-52.8-8.4h-4.1c-1.6 0-3.1.6-4.2 1.8v-4.6h-1.8v11.3c0 3.3 2.7 6 6 6h4.1c3.3 0 6-2.7 6-6v-2.5c0-3.3-2.7-6-6-6zm4.2 8.4c0 2.3-1.9 4.3-4.2 4.3h-4.1c-2.3 0-4.2-1.9-4.2-4.2v-2.5c0-.3 0-.5.1-.8.4-2 2.1-3.5 4.2-3.5h4.1c2.3 0 4.2 1.9 4.2 4.2v2.5h-.1zm54.3-.9c0-2.8 2.2-5.1 5-5.1h6.5v-1.9h-6.5c-3.8.1-6.8 3.2-6.8 6.9s2.9 6.8 6.7 6.9h6.9v-1.8h-6.8c-2.8 0-5-2.2-5-5zm21.6-1.3 5-4.9-1.2-1.3-9.2 8.8v-11.5h-1.8v17.1h1.8v-3.1l4.1-3.9 5.9 6.9h2.4l-7-8.1z" class="logo"/>
+</svg>
